@@ -1,0 +1,260 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+/* Parent Level and Common Styles */
+
+body, .collection > p {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+header, main {
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90vw;
+}
+#nav-container, #nav-container > div:last-child, #heading, .ratings, #special-offer {
+    display: flex;
+}
+img {
+    display: block;
+    width: 100%;
+}
+p, a {
+    font-size: small;
+}
+a {
+    text-decoration: none;
+}
+#heading-details a, footer, #icons > a, #so-details > a {
+    color: #ffffff;
+}
+
+/* Nav Container Styles */
+
+#nav-container {
+    align-items: end;
+    height: 100px;
+    justify-content: space-between;
+}
+#nav-menu {
+    display: none;
+}
+#nav-container > h3 {
+    margin: 0;
+}
+nav > a, nav > span {
+    color:  #000000;
+    margin-right: 30px;
+}
+#nav-container i {
+    font-size: 20px;
+}
+
+/* Heading Styles */
+
+#heading {
+    align-items: center;
+    height: 45vw;
+}
+#heading-details {
+    order: 1;
+    margin-right: 10%;
+    width: 50%;
+}
+#heading-details a, #so-details > a {
+    background-color: #223fe4e0;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+.fa-arrow-right {
+    margin-left: 10px;
+}
+#heading-image {
+    background-image: url(../images/circle-design.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    order: 2;
+    padding: 1%;
+    width: 40%;
+}
+
+/* Collection Styles */
+
+h3, footer {
+    text-align: center;
+}
+#collection-container {
+    display: grid;
+    gap: 2.5vw;
+    grid-template-columns: repeat(3, 1fr);
+}
+.collection {
+    border-radius: 5px;
+    box-shadow: 0 0 10px #C0C0C0;
+    padding: 15px;
+}
+.collection > h3 {
+    text-align: left;
+}
+.collection p:not(.price, .stars) {
+    color: #808080;
+}
+.price {
+    font-size: large;
+}
+.stars {
+    color: rgb(252, 189, 30);
+    width: 35%;
+}
+#see-more {
+    color: #223fe4e0;
+    display: block;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 50px;
+    text-align: right;
+}
+
+/* Special Offer Styles */
+
+#special-offer {
+    margin: 100px 0;
+}
+#so-image {
+    order: 1;
+    width: 40%;
+    transition: .4s;
+}
+#so-image:hover{
+
+    transform: translate(0px,-28px);
+    cursor: pointer;
+}
+#so-details {
+    margin-left: 10%;
+    order: 2;
+    width: 50%;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #0a0826;
+    margin: 50px 0 0;
+    padding: 50px 0;
+}
+footer > p {
+    margin: 0 0 5px;
+}
+#icons {
+    margin-top: 20px;
+}
+#icons > a {
+    background-color: #211b7e;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: x-large;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+/* --------------- *\
+    Media Queries
+\* --------------- */
+
+@media only screen and (max-width: 999px) {
+header, main {
+    width: 90vw;
+}
+p, a {
+    font-size: 1.25em;
+}
+
+/* Nav Container Styles */
+
+#nav-menu {
+    display: block;
+}
+#nav-menu > * {
+    background-color: #000000;
+    border-radius: 5px;
+    height: 3px;
+    margin: 5px;
+    width: 25px;
+}
+nav {
+    display: none;
+}
+
+/* Heading Styles */
+
+#heading {
+    display: block;
+    height: auto;
+    margin-bottom: 50px;
+}
+#heading-image {
+    background-size: 100% 100%;
+    margin: 30px auto;
+    padding: 5%;
+    width: 90%;
+}
+#heading-details {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+#heading-details a {
+    border-radius: 35px;
+    padding: 15px 35px;
+}
+#see-more .fa-arrow-right {
+    margin-left: 0;
+}
+
+/* Collection Styles */
+
+#collection-container {
+    gap: 5vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+.collection:last-child {
+    display: none;
+}
+.stars {
+    width: 75%;
+}
+
+/* Special Offer Styles */
+
+#special-offer {
+    display: block;
+    text-align: center;
+}
+#so-details, #so-image {
+    width: 100%;
+}
+#so-details {
+    margin: 0;
+}
+#so-details > p > a {
+    font-size: 1em;
+}
+}
+@media only screen and (max-width: 599px) {
+#collection-container {
+    display: block;
+}
+.collection {
+    margin-bottom: 20px;
+}
+.collection:last-child {
+    display: block;
+}
+.stars {
+    width: 45%;
+}
+}
